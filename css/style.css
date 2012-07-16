@@ -202,6 +202,15 @@ div[role="main"] a:hover { color: #fff; }
 	border-bottom: 0px none #fff;
 }
 
+#photolist img {
+	width: 70px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#photolist a:nth-child(3n) img{
+	padding-right: 0px;
+}
 
 
 /* =============================================================================
