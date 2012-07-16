@@ -26,6 +26,8 @@ $(document).ready(function() {
 	// Trigger resize function to make sure the logo fits
 	$(window).resize();
 	
+	$("#videolink a").colorbox({ innerWidth:'1280px', innerHeight:'720px', iframe:true });
+	
 	loadGigs("upcomming-gigs");
 	var now = new Date();
 	var today = now.format("yyyy-mm-dd");

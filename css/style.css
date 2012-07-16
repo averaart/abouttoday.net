@@ -202,6 +202,11 @@ div[role="main"] a:hover { color: #fff; }
 	border-bottom: 0px none #fff;
 }
 
+#videolink {
+	padding-bottom: 30px;
+}
+
+
 #photolist img {
 	width: 70px;
 	padding-right: 5px;
@@ -211,6 +216,9 @@ div[role="main"] a:hover { color: #fff; }
 #photolist a:nth-child(3n) img{
 	padding-right: 0px;
 }
+
+#videolink a:focus,
+#photolist a:focus { outline: none; }
 
 
 /* =============================================================================
