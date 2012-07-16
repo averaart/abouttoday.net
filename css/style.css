@@ -162,7 +162,7 @@ div[role="main"] p, div[role="main"] li{
 }
 
 div[role="main"] a { color: #0ab; text-decoration: none;}
-div[role="main"] a:visited { color: #000; }
+div[role="main"] a:visited { color: #0ab; }
 div[role="main"] a:hover { color: #fff; }
 
 
