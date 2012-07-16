@@ -75,7 +75,15 @@ td { vertical-align: top; }
    ========================================================================== */
 
 
-
+html { 
+	background: #000 url('/img/back.jpg') no-repeat center center fixed; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	
+	color: #fff;
+}
 
 
 
