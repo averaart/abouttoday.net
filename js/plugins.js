@@ -33,7 +33,6 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 				var textWidth;
 				do {
 					ourText.css('font-size', fontSize);
-					ourText.css('line-height', '1em');
 					textHeight = ourText.height();
 					textWidth = ourText.width();
 					fontSize = fontSize - 1;
