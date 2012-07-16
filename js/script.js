@@ -56,7 +56,7 @@ var loadGigs = function(target, range){
 				datetime = new Date(date[0], date[1]-1, date[2], time[0], time[1], time[2], 0);
 				date = dateFormat(datetime, "dddd mmmm dS, HH:MM");
 				html += "<li>"+
-					date+"<br>"+
+					"<a href='"+gig.facebook_rsvp_url+"' title='"+gig.title+"'>"+date+"</a><br>"+
 					gig.venue.name+"<br>"+
 					gig.venue.city+
 					"</li>";
