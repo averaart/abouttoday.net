@@ -9,3 +9,39 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 
+; (function($) {
+	/**
+	* Resizes an inner element's font so that the inner element completely fills the outer element.
+	* @author Russ Painter WebDesign@GeekyMonkey.com
+	* @version 0.1
+	* @param {Object} Options which are maxFontPixels (default=40), innerTag (default='span')
+	* @return All outer elements processed
+	* @example <div class='mybigdiv filltext'><span>My Text To Resize</span></div>
+	*/
+	$.fn.textfill = function(options) {
+		var defaults = {
+			maxFontPixels: 40,
+			innerTag: 'span'
+		};
+		var Opts = jQuery.extend(defaults, options);
+		return this.each(function() {
+			var maxWidth = $(this).width();
+			$.each($(Opts.innerTag + ':visible', this), function(index, ourText){
+				ourText = $(ourText);
+				var fontSize = Opts.maxFontPixels;
+				var textHeight;
+				var textWidth;
+				do {
+					ourText.css('font-size', fontSize);
+					ourText.css('line-height', '1em');
+					textHeight = ourText.height();
+					textWidth = ourText.width();
+					fontSize = fontSize - 1;
+				} while ((textHeight > (fontSize*1.5) || textWidth > maxWidth) && fontSize > 3);
+			});
+		});
+	};
+})(jQuery);
+
+
+

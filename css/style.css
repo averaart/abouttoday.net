@@ -77,20 +77,63 @@ td { vertical-align: top; }
 html, body{
 	color: #fff;
 	background-color: #000;
+	font-weight: lighter;
+}
+
+.jtextfill{
+	width: 220px;
+}
+
+h2 {
+	font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+	font-weight: 900;
+	text-transform:uppercase;
+	width: 220px;
+	line-height: 1.3em;
+	margin: 30px 0 40px 0;
 }
 
 #header-wrap{
 	width: 100%;
-	height: 165px;
+	height: 110px;
 	background-color: #fff;
 	position: fixed;
 	top: 40px;
+	padding-top: 55px;
+	display: table-cell;
 }
 
 header{
 	color: #000;
-	max-width: 1320px;
+	max-width: 1030px;
 	margin: 0 auto;
+	position: relative;
+	left: 50px;
+}
+
+h1#logo{
+	display:inline-block;
+	vertical-align:text-bottom;
+	background-image: url("/img/logo.svg");
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 470px;
+	height: 72px;
+	margin: 0;
+}
+
+header p{
+	font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+	font-weight: 900;
+	text-transform:uppercase;
+	display:inline-block;
+	vertical-align:text-bottom;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 5px;
 }
 
 div[role="main"] {
@@ -102,6 +145,10 @@ div[role="main"] {
 	-o-background-size: 1320px auto;
 	background-size: 1320px auto;
 	
+}
+
+div[role="main"] p, div[role="main"] li{
+	font-size: 0.95em;
 }
 
 .column {
