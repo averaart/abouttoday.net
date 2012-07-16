@@ -27,7 +27,10 @@ $(document).ready(function() {
 	$(window).resize();
 	
 	loadGigs("upcomming-gigs");
-	loadGigs("past-gigs", "2000-01-01,"+new Date().format("yyyy-mm-dd"));
+	var now = new Date();
+	var today = now.format("yyyy-mm-dd");
+	var yearAgo = new Date(now.getTime() - 365*24*60*60*1000).format("yyyy-mm-dd");
+	loadGigs("past-gigs", yearAgo+","+today);
 	
 });
 
