@@ -188,6 +188,19 @@ div[role="main"] a:hover { color: #fff; }
 }
 
 
+.gigs ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+.gigs li{
+	padding: 0.5em 0;
+	border-bottom: 1px dotted #fff;
+}
+
+.gigs li:last-child{
+	border-bottom: 0px none #fff;
+}
 
 
 
