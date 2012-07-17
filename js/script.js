@@ -33,7 +33,7 @@ $(document).ready(function() {
 	var today = now.format("yyyy-mm-dd");
 	var yearAgo = new Date(now.getTime() - 365*24*60*60*1000).format("yyyy-mm-dd");
 	loadGigs("past-gigs", yearAgo+","+today);
-	loadFlickrSet("72157624826648990", "photolist");
+	loadFlickrSet("72157624826648990", "photolist", 30);
 	
 });
 
@@ -70,9 +70,15 @@ var loadGigs = function(target, range){
 		});
 }
 
-var loadFlickrSet = function(setId, target){
+var loadFlickrSet = function(setId, target, limit){
+	var per_page = "";
+	console.log(limit);
+	if (limit != undefined){
+		per_page = "&per_page="+limit;
+	}
 	var apiKey = "3d8a7e8f34196d45f383edd8d7a31c1a";
-	var request = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='+apiKey+'&photoset_id='+setId+'&extras=url_l%2C+url_sq&format=json&jsoncallback=?&per_page=9';
+	var request = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='+apiKey+'&photoset_id='+setId+'&extras=url_l%2C+url_sq&format=json&jsoncallback=?'+per_page;
+	console.log(request);
 	$.getJSON(request, function(response) {
 		var photos = response.photoset.photo;
 		var photo;

@@ -157,8 +157,21 @@ div[role="main"] {
 	
 }
 
-div[role="main"] p, div[role="main"] li{
+div[role="main"] p,
+div[role="main"] li,
+div[role="main"] blockquote{
 	font-size: 0.8em;
+}
+
+div[role="main"] blockquote{
+	margin: 0;
+	font-style: italic;
+	quotes:'”' '„' '‘' '’';
+}
+
+div[role="main"] blockquote + p {
+	text-align: right;
+	margin-bottom: 2em;
 }
 
 div[role="main"] a { color: #0ab; text-decoration: none;}
@@ -201,6 +214,16 @@ div[role="main"] a:hover { color: #fff; }
 .gigs li:last-child{
 	border-bottom: 0px none #fff;
 }
+
+
+div#bandcamp-player {
+	width: 150px;
+	padding: 35px 35px 15px;
+	margin-bottom: 30px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+
 
 #videolink {
 	padding-bottom: 30px;
