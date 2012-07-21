@@ -159,7 +159,8 @@ div[role="main"] {
 
 div[role="main"] p,
 div[role="main"] li,
-div[role="main"] blockquote{
+div[role="main"] blockquote,
+div[role="main"] footer{
 	font-size: 0.8em;
 }
 
@@ -242,6 +243,18 @@ div#bandcamp-player {
 
 #videolink a:focus,
 #photolist a:focus { outline: none; }
+
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+}
+
+div[role="main"] a { color: #fff; text-decoration: none;}
+div[role="main"] a:visited { color: #fff; }
+div[role="main"] a:hover { color: #0ab; }
+
 
 
 /* =============================================================================

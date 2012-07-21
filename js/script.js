@@ -4,6 +4,16 @@
 
 $(document).ready(function() {
 
+	$('#email').html(function(){
+		var e = "band";
+		var a = "@";
+		var d = "abouttoday";
+		var c = ".net";
+		var h = 'mailto:' + e + a + d + c;
+		$(this).parent('a').attr('href', h);
+		return e + a + d + c;
+	});
+
 	// Let the headers take full column-width
 	$('h2').textfill({ maxFontPixels: 60 });
 	
