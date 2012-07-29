@@ -105,7 +105,7 @@ h2 span {
 	width: 100%;
 	background-color: #fff;
 	margin-top: 40px;
-	padding: 55px 0 40px;
+	padding: 44px 0 32px;
 	
 }
 
@@ -125,13 +125,14 @@ h1#logo{
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
-	width: 470px;
-	height: 72px;
+	width: 376px;
+	height: 58px;
 	margin: 0;
 }
 
 header p{
 	font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+	font-size: 0.8em;
 	font-weight: 900;
 	text-transform:uppercase;
 	display:inline-block;
@@ -139,7 +140,7 @@ header p{
 	margin: 0;
 	padding: 0;
 	position: relative;
-	top: 5px;
+	top: 4px;
 }
 
 header p a { color: #000; text-decoration: none;}

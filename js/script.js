@@ -18,18 +18,21 @@ $(document).ready(function() {
 	$('h2').textfill({ maxFontPixels: 60 });
 	
 	// Define function to resize logo if viewport becomes to small
+	
 	$(window).resize(function() {
+		var origHeight = parseInt(jss('h1#logo').get()['height'].replace("px", ""));
+		var origWidth = parseInt(jss('h1#logo').get()['width'].replace("px", ""));
 		var viewportWidth = $(window).width();
 		var headerPadding = parseInt($('header').css('padding-left').replace("px", ""));
 		var logoWidth = $('#logo').width();
 		
-		if ( (viewportWidth < 470+(headerPadding*2)) && (logoWidth <= 470) ) {
+		if ( (viewportWidth < origWidth+(headerPadding*2)) && (logoWidth <= origWidth) ) {
 			var newWidth = viewportWidth-(headerPadding*2)
 			$('#logo').width(newWidth);
-			$('#logo').height(72/470*newWidth);
-		} else if (logoWidth < 470){
-			$('#logo').width(470);
-			$('#logo').height(72);
+			$('#logo').height(origHeight/origWidth*newWidth);
+		} else if (logoWidth < origWidth){
+			$('#logo').width(origWidth);
+			$('#logo').height(origHeight);
 		}
 	});
 	
