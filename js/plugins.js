@@ -36,6 +36,7 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 					textHeight = ourText.height();
 					textWidth = ourText.width();
 					fontSize = fontSize - 1;
+					if ($(ourText).html() == "New EP") {console.log($(ourText).html() +" - "+ fontSize +" - "+ textHeight);}
 				} while ((textHeight > (fontSize*1.5) || textWidth > maxWidth) && fontSize > 3);
 			});
 		});

@@ -13,9 +13,6 @@ $(document).ready(function() {
 		$(this).parent('a').attr('href', h);
 		return e + a + d + c;
 	});
-
-	// Let the headers take full column-width
-	$('h2').textfill({ maxFontPixels: 60 });
 	
 	// Define function to resize logo if viewport becomes to small
 	
@@ -47,6 +44,8 @@ $(document).ready(function() {
 	var yearAgo = new Date(now.getTime() - 365*24*60*60*1000).format("yyyy-mm-dd");
 	loadGigs("past-gigs", yearAgo+","+today);
 	loadFlickrSet("72157624826648990", "photolist", 30);
+	
+	
 	
 });
 
@@ -85,7 +84,6 @@ var loadGigs = function(target, range){
 
 var loadFlickrSet = function(setId, target, limit){
 	var per_page = "";
-	console.log(limit);
 	if (limit != undefined){
 		per_page = "&per_page="+limit;
 	}
@@ -110,5 +108,8 @@ var loadFlickrSet = function(setId, target, limit){
 										maxHeight:'100%',
 										slideshow: true,
 										slideshowSpeed: 5000});
+			// Let the headers take full column-width
+	
+
 	});			
 }

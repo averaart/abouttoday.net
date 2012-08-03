@@ -18,11 +18,8 @@
 	<meta name="viewport" content="width=device-width">
 	
 	<base target="_blank" />
-
 	<link rel="stylesheet" href="css/colorbox.css">	
 	<link rel="stylesheet" href="css/style.css">
-
-
 
 	<script src="js/libs/modernizr-2.5.3.min.js"></script>
 
@@ -81,9 +78,9 @@ Although their musical tastes are all over the place, you'll probably hear influ
 
 <div class="column">
 <section>
-	<h2>
-		<span>New EP</span>
-		<span>'Perspective'</span>
+	<h2 id="ep">
+		<span id="new">New EP</span>
+		<span id="per">'Perspective'</span>
 		<span>out now!</span>
 	</h2>
 	<img src="img/perspective.jpg" alt="Perspective cover art"/>
@@ -134,14 +131,26 @@ Although their musical tastes are all over the place, you'll probably hear influ
 
 </footer>
 </div> <!-- /main -->
-
-
-
-
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+<script type="text/javascript">
+  WebFontConfig = {
+	google: { families: [ 'Cantarell' ] },
+	active: function(){ $('h2').fadeIn("fast"); 
+						$('h2').textfill({ maxFontPixels: 60 });
+						}
+  };
+  (function() {
+	var wf = document.createElement('script');
+	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+  })();
+</script>
 
 <script src="js/libs/date.format.js"></script>
 <script src="js/libs/jss.js"></script>
