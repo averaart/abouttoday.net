@@ -135,10 +135,31 @@ Although their musical tastes are all over the place, you'll probably hear influ
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
 <script type="text/javascript">
+
+	function getQueryParams(qs) {
+		qs = qs.split("+").join(" ");
+		var params = {},
+			tokens,
+			re = /[?&]?([^=]+)=([^&]*)/g;
+	
+		while (tokens = re.exec(qs)) {
+			params[decodeURIComponent(tokens[1])]
+				= decodeURIComponent(tokens[2]);
+		}
+	
+		return params;
+	}
+	
+	var query = getQueryParams(document.location.search);
+	var font = query['font'] == undefined ? 'Cantarell' : query['font'];
+
+
+
+
   WebFontConfig = {
-	google: { families: [ 'Cantarell' ] },
+	google: { families: [ font ] },
 	active: function(){ $('h2').fadeIn("fast"); 
-						$('h2').textfill({ maxFontPixels: 60 });
+						$('h2').textfill({ maxFontPixels: 80 });
 						}
   };
   (function() {
@@ -154,6 +175,23 @@ Although their musical tastes are all over the place, you'll probably hear influ
 
 <script src="js/libs/date.format.js"></script>
 <script src="js/libs/jss.js"></script>
+
+
+<script>
+
+console.log(font);
+
+jss('h2', {
+    'font-family': font
+});
+
+jss('h3', {
+    'font-family': font
+});
+
+</script>
+
+
 
 <script src="js/plugins.js"></script>
 
