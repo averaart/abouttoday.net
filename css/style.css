@@ -264,6 +264,67 @@ div[role="main"] a:hover { color: #0ab; }
 
 
 
+
+
+/* Adjustments for medium screen-sizes */
+
+body.medium .column {
+	max-width: none;
+	width: 37%;
+	padding: 20px 4%;
+	margin-left: 3%;
+	margin-right: 0;
+}
+
+body.medium .column.second {
+	float: right;
+	margin-right: 3%;
+	
+}
+
+body.medium .column.last {
+	margin-right: 0;
+}
+
+
+
+/* Adjustments for medium and small screen-sizes*/
+
+body.small h2, body.medium h2 {
+	margin: 40px auto 30px;
+}
+
+body.small .column img, body.medium .column img{
+	max-width: 100%;
+}
+
+
+body.small .column.last div, body.medium .column.last div{
+	max-width: 220px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Adjustments for small screen-sizes */
+
+body.small .column {
+	max-width: none;
+	width: 80%;
+	padding: 0 10%;
+	margin-right: 0;
+}
+
+body.small .column.last{
+	padding-bottom: 20px;
+}
+
+
+
+
+
+
 /* =============================================================================
    Media Queries
    ========================================================================== */

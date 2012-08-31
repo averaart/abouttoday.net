@@ -17,8 +17,10 @@ $(document).ready(function() {
 	// Define function to resize logo if viewport becomes to small
 	
 	$(window).resize(function() {
-		var origHeight = parseInt(jss('h1#logo').get()['height'].replace("px", ""));
-		var origWidth = parseInt(jss('h1#logo').get()['width'].replace("px", ""));
+//		var origHeight = parseInt(jss('h1#logo').get()['height'].replace("px", ""));
+//		var origWidth = parseInt(jss('h1#logo').get()['width'].replace("px", ""));
+		var origHeight = 58;
+		var origWidth = 376;
 		var viewportWidth = $(window).width();
 		var headerPadding = parseInt($('header').css('padding-left').replace("px", ""));
 		var logoWidth = $('#logo').width();
@@ -30,6 +32,14 @@ $(document).ready(function() {
 		} else if (logoWidth < origWidth){
 			$('#logo').width(origWidth);
 			$('#logo').height(origHeight);
+		}
+		
+		if (viewportWidth >= 1030){
+			$('body').removeClass('medium').removeClass('small');
+		} else if (viewportWidth >= 720){
+			$('body').removeClass('small').addClass('medium');
+		} else {
+			$('body').removeClass('medium').addClass('small');		
 		}
 	});
 	
