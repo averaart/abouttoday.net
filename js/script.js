@@ -48,7 +48,7 @@ $(document).ready(function() {
 	
 	$("#videolink a").colorbox({ innerWidth:'1280px', innerHeight:'720px', iframe:true });
 	
-	loadGigs("upcomming-gigs");
+	loadGigs("upcoming-gigs");
 	var now = new Date();
 	var today = now.format("yyyy-mm-dd");
 	var yearAgo = new Date(now.getTime() - 365*24*60*60*1000).format("yyyy-mm-dd");
