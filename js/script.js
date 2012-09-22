@@ -55,9 +55,9 @@ $(document).ready(function() {
 	loadGigs("past-gigs", yearAgo+","+today);
 	loadFlickrSet("72157624826648990", "photolist", 30);
 	
-	
-	
 });
+
+// <------------ END document ready -----------------------------
 
 
 var loadGigs = function(target, range){
