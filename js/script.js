@@ -65,8 +65,9 @@ var loadGigs = function(target, range){
 	if (range != undefined){
 		date += "&date="+range;
 	}
-	$.getJSON('https://api.bandsintown.com/artists/About%20Today/events.json?app_id=abouttodaywebsite&api_version=2.0&artist_id=fbid_125753003016&callback=?'+date,
-		function(gigs) {
+	$.jsonp({
+		url: 'https://api.bandsintown.com/artists/About%20Today/events.json?app_id=abouttodaywebsite&api_version=2.0&artist_id=fbid_125753003016&callback=?'+date,
+		success: function(gigs) {
 			var html = "<ul>";
 			for (var i in gigs){
 				var gig;
@@ -89,7 +90,11 @@ var loadGigs = function(target, range){
 			}
 			html += "</ul>";
 			$('#'+target).html(html);		
-		});
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown){
+			loadGigs(target, range);
+		}
+	});
 }
 
 var loadFlickrSet = function(setId, target, limit){
@@ -118,8 +123,5 @@ var loadFlickrSet = function(setId, target, limit){
 										maxHeight:'100%',
 										slideshow: true,
 										slideshowSpeed: 5000});
-			// Let the headers take full column-width
-	
-
 	});			
 }
