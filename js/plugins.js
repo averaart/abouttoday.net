@@ -36,7 +36,7 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 					textHeight = ourText.height();
 					textWidth = ourText.width();
 					fontSize = fontSize - 1;
-				} while ((textHeight > (fontSize*1.9) || textWidth > maxWidth) && fontSize > 3);
+				} while ((textHeight > (fontSize*1.13) || textWidth > maxWidth) && fontSize > 3);
 			});
 		});
 	};
