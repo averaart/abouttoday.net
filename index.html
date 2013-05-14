@@ -18,22 +18,22 @@
 	<meta name="viewport" content="width=device-width">
 
 	<base target="_blank" />
-	<link rel="stylesheet" href="css/colorbox.css">	
+	<link rel="stylesheet" href="css/colorbox.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/libs/modernizr-2.5.3.min.js"></script>
 	<script type="text/javascript">
-	
+
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-8754899-1']);
 	  _gaq.push(['_trackPageview']);
-	
+
 	  (function() {
 		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-	
+
 	</script>
 </head>
 <body>
@@ -41,12 +41,12 @@
 <header>
 
 <h1 id="logo" class="ir">About Today</h1>
-<p class="linkbar">Connect to 
-	<a href="https://www.facebook.com/abouttoday" title="The About Today Facebook page">Facebook</a> / 
-	<a href="http://soundcloud.com/abouttoday-official" title="About Today's music on SoundCloud">SoundCloud</a> / 
-	<a href="https://twitter.com/abouttoday_net" title="About Today on Twitter">Twitter</a> / 
-	<a href="https://www.youtube.com/AboutTodayMusic" title="About Today's videos on YouTube">YouTube</a> / 
-	<a href="https://www.myspace.com/abouttodaymusic" title="About Today on Myspace">Myspace</a> / 
+<p class="linkbar">Connect to
+	<a href="https://www.facebook.com/abouttoday" title="The About Today Facebook page">Facebook</a> /
+	<a href="http://soundcloud.com/abouttoday-official" title="About Today's music on SoundCloud">SoundCloud</a> /
+	<a href="https://twitter.com/abouttoday_net" title="About Today on Twitter">Twitter</a> /
+	<a href="https://www.youtube.com/AboutTodayMusic" title="About Today's videos on YouTube">YouTube</a> /
+	<a href="https://www.myspace.com/abouttodaymusic" title="About Today on Myspace">Myspace</a> /
 	<a href="https://www.flickr.com/photos/abouttoday/" title="About Today's photos on Flickr">Flickr</a>
 </p>
 
@@ -62,11 +62,11 @@
 	<h2><span>Quotes</span></h2>
 	<blockquote>&#8220;A combination of fragile songs, hushed moments, powerful rock and driving rhythms.&#8222;</blockquote>
 	<p>Daan de Mooy, LiveXS, 2012</p>
-	
+
 	<blockquote>&#8220;Perspective shows where About Today excells in; uplifting rock with dissonant guitars and a good feel for dynamics.
 I'm allready curious about their next release.&#8222;</blockquote>
 	<p>Chris Dietzel, Festivalinfo, 2012</p>
-	
+
 	<blockquote>&#8220;The demo of About Today is a typical case of &#8216;wanting to hear more&#8217;.&#8222;</blockquote>
 	<p>Niels-Jan, Speaker, 2011</p>
 </section>
@@ -96,11 +96,19 @@ The line up of baritone guitar, guitar and drums creates an intricate sound whic
 </div> <!-- /first column -->
 <div class="second column">
 <section>
-	<h2 id="tour"><span>On Tour</span></h2>
-	<p>We have joined forces with <a href="http://www.thelightparade.nl" title="The Light Parade official website">The Light Parade</a> and <a href="http://yesterdaysmen.nl" title="Yesterday's Men official website">Yesterday's Men</a> to bring you an evening with the ultimate in Indie Entertainment!</p>
-	<img src="img/tour.jpg" alt="Long Winter Tour Poster"/>
-	<p>We already have confirmed dates for Amsterdam, The Hague, Woerden & Wageningen. Be sure to check us and our friends out at a venue near you!</p>
-	
+	<h2 id="tour"><span>Single Release</span></h2>
+	<p><a href="https://www.facebook.com/events/302345959897052/">On friday the 10th of May</a> About Today will release their single 'Pollyanna' and the accompanying music-video at <a href="http://www.clubvibes.nl/index2.php">Club Vibes</a> in Rotterdam.</p>
+
+	<p>The single was recorded at the <a href="http://www.lindenstudio.nl">Linden Studios</a>. The music-video was produced by <a href="http://www.screamread.tv">Margarita Kouvatsou (Screamread)</a> and <a href="http://ninaspiering.com">Nina Spiering</a> (executive producer on 'Elephants' by Blaudzun).</p>
+
+	<img src="img/pollyanna_release.jpg" alt="Long Winter Tour Poster"/>
+
+	<p>Pollyanna tells a story of blind optimism, which in the video is represented by Bob Kreder (Dutch Champion Trial) and Pip Steinkamp.</p>
+
+	<p>On the night of the release, About Today will be supported by <a href="http://www.thelightparade.nl" title="The Light Parade official website">The Light Parade</a> and <a href="http://yesterdaysmen.nl" title="Yesterday's Men official website">Yesterday's Men</a> as part of the nationwide Long Winter Tour. Tickets for the release-party will be 5 euros and will include a download code for the single for every visitor.</p>
+
+	<p>After the release Pollyanna will be available through <a href="http://abouttodayofficial.bandcamp.com" title="About Today on Bandcamp">Bandcamp</a>, <a href="https://itunes.apple.com/artist/about-today/id406414079" title="About Today on iTunes">iTunes</a> and <a href="http://open.spotify.com/artist/5wRItN7pAUFmDHcdCWdYqy" title="About Today on Spotify">Spotify</a>.</p>
+
 </section>
 
 <section>
@@ -156,15 +164,15 @@ The line up of baritone guitar, guitar and drums creates an intricate sound whic
 		var params = {},
 			tokens,
 			re = /[?&]?([^=]+)=([^&]*)/g;
-	
+
 		while (tokens = re.exec(qs)) {
 			params[decodeURIComponent(tokens[1])]
 				= decodeURIComponent(tokens[2]);
 		}
-	
+
 		return params;
 	}
-	
+
 	var query = getQueryParams(document.location.search);
 	var font = query['font'] == undefined ? 'Nixie One' : query['font'];
 
@@ -173,7 +181,7 @@ The line up of baritone guitar, guitar and drums creates an intricate sound whic
 
   WebFontConfig = {
 	google: { families: [ font ] },
-	active: function(){ $('h2').fadeIn("fast"); 
+	active: function(){ $('h2').fadeIn("fast");
 						// $('h2').textfill({ maxFontPixels: 60 });
 						$('h2').css("font-family", font);
 						}
