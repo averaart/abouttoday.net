@@ -13,9 +13,9 @@ $(document).ready(function() {
 		$(this).parent('a').attr('href', h);
 		return e + a + d + c;
 	});
-	
+
 	// Define function to resize logo if viewport becomes to small
-	
+
 	$(window).resize(function() {
 //		var origHeight = parseInt(jss('h1#logo').get()['height'].replace("px", ""));
 //		var origWidth = parseInt(jss('h1#logo').get()['width'].replace("px", ""));
@@ -24,7 +24,7 @@ $(document).ready(function() {
 		var viewportWidth = $(window).width();
 		var headerPadding = parseInt($('header').css('padding-left').replace("px", ""));
 		var logoWidth = $('#logo').width();
-		
+
 		if ( (viewportWidth < origWidth+(headerPadding*2)) && (logoWidth <= origWidth) ) {
 			var newWidth = viewportWidth-(headerPadding*2)
 			$('#logo').width(newWidth);
@@ -33,28 +33,28 @@ $(document).ready(function() {
 			$('#logo').width(origWidth);
 			$('#logo').height(origHeight);
 		}
-		
+
 		if (viewportWidth >= 1030){
 			$('body').removeClass('medium').removeClass('small');
 		} else if (viewportWidth >= 720){
 			$('body').removeClass('small').addClass('medium');
 		} else {
-			$('body').removeClass('medium').addClass('small');		
+			$('body').removeClass('medium').addClass('small');
 		}
 	});
-	
+
 	// Trigger resize function to make sure the logo fits
 	$(window).resize();
-	
-	$("#videolink a").colorbox({ innerWidth:'1280px', innerHeight:'720px', iframe:true });
-	
+
+	$(".videolink a").colorbox({ innerWidth:'1280px', innerHeight:'720px', iframe:true });
+
 	loadGigs("upcoming-gigs");
 	var now = new Date();
 	var today = now.format("yyyy-mm-dd");
 	var yearAgo = new Date(now.getTime() - 365*24*60*60*1000).format("yyyy-mm-dd");
 	loadGigs("past-gigs", yearAgo+","+today);
 	loadFlickrSet("72157624826648990", "photolist", 30);
-	
+
 });
 
 // <------------ END document ready -----------------------------
@@ -86,10 +86,10 @@ var loadGigs = function(target, range){
 					gig.venue.name+"<br>"+
 					gig.venue.city+
 					"</li>";
-				
+
 			}
 			html += "</ul>";
-			$('#'+target).html(html);		
+			$('#'+target).html(html);
 		},
 		error: function (XMLHttpRequest, textStatus, errorThrown){
 			loadGigs(target, range);
@@ -123,5 +123,5 @@ var loadFlickrSet = function(setId, target, limit){
 										maxHeight:'100%',
 										slideshow: true,
 										slideshowSpeed: 5000});
-	});			
+	});
 }
