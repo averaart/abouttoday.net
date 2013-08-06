@@ -69,7 +69,6 @@ td { vertical-align: top; }
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 
-
 /* ===== Primary Styles ========================================================
    Author: Andra Veraart
    ========================================================================== */
@@ -113,7 +112,7 @@ h2 span {
 	background-color: #fff;
 	margin-top: 40px;
 	padding: 44px 0 32px;
-	
+
 }
 
 header{
@@ -157,12 +156,12 @@ header p a:hover { color: #0ab; }
 div[role="main"] {
 	max-width: 1320px;
 	margin: 0 auto;
-	background: url('/img/bg1320.jpg') no-repeat center 175px fixed; 
+	background: url('/img/bg1320.jpg') no-repeat center 175px fixed;
 	-webkit-background-size: 1320px auto;
 	-moz-background-size: 1320px auto;
 	-o-background-size: 1320px auto;
 	background-size: 1320px auto;
-	
+
 }
 
 div[role="main"] p,
@@ -234,10 +233,13 @@ div#bandcamp-player {
 
 
 
-#videolink {
-	padding-bottom: 30px;
+.videolink {
+	padding-bottom: 20px;
 }
 
+p+.videolink {
+	padding-bottom: 0px;
+}
 
 #photolist img {
 	width: 70px;
@@ -249,7 +251,7 @@ div#bandcamp-player {
 	padding-right: 0px;
 }
 
-#videolink a:focus,
+.videolink a:focus,
 #photolist a:focus { outline: none; }
 
 
@@ -280,7 +282,7 @@ body.medium .column {
 body.medium .column.second {
 	float: right;
 	margin-right: 3%;
-	
+
 }
 
 body.medium .column.last {
@@ -351,7 +353,7 @@ body.small .column.last{
 /* =============================================================================
    Print Styles
    ========================================================================== */
- 
+
 @media print {
   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
   a, a:visited { text-decoration: underline; }
