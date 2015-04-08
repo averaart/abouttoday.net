@@ -156,11 +156,11 @@ header p a:hover { color: #0ab; }
 div[role="main"] {
 	max-width: 1320px;
 	margin: 0 auto;
-	background: url('/img/bg1320.jpg') no-repeat center 175px fixed;
-	-webkit-background-size: 1320px auto;
-	-moz-background-size: 1320px auto;
-	-o-background-size: 1320px auto;
-	background-size: 1320px auto;
+	background: url('/img/bg1320.jpg') no-repeat center bottom fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
 }
 
