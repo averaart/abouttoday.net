@@ -164,6 +164,7 @@ div[role="main"] {
 
 }
 
+div[role="main"] div#mc_embed_signup,
 div[role="main"] p,
 div[role="main"] li,
 div[role="main"] blockquote,
@@ -207,6 +208,44 @@ div[role="main"] a:hover { color: #fff; }
 .column img {
 	max-width: 220px;
 }
+
+
+
+
+
+#mc_embed_signup {
+	background: transparent;
+	border: solid 1px #fff;
+	padding: 10%;
+}
+#mc_embed_signup input {
+	width: 100%;
+}
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="email"] {
+	background: transparent;
+	color: #fff;
+	width: 100%;
+	padding: 3%;
+	border: solid 1px #fff;
+	box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+}
+#mc_embed_signup .mc-field-group div {
+	padding-top: 5px;
+}
+#mc_embed_signup #submit {
+	padding-top: 15px;
+}
+#mc_embed_signup .indicates-required {
+	width: 100%;
+	text-align: right;
+	font-size: 0.8em;
+	padding-top: 0.9em;
+}
+
+
 
 
 .gigs ul{
