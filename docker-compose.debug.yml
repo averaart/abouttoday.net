@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  about today website:
+    image: about today website
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80

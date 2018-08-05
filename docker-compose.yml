@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  about today website:
+    image: about today website
+    build: .
+    ports:
+      - 80:80
