@@ -1,8 +1,13 @@
-version: '2.1'
+version: '3.7'
 
 services:
-  about today website:
-    image: about today website
-    build: .
-    ports:
-      - 80:80
+  abouttoday:
+    image: abouttoday.net:production
+    networks:
+      - web
+    labels:
+      - "traefik.frontend.rule=Host:www.abouttoday.net"
+      - "traefik.docker.network=traefik_default"
+networks:
+  web:
+    name: traefik_default
