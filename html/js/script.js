@@ -14,38 +14,6 @@ $(document).ready(function() {
 		return e + a + d + c;
 	});
 
-	// Define function to resize logo if viewport becomes to small
-
-	$(window).resize(function() {
-//		var origHeight = parseInt(jss('h1#logo').get()['height'].replace("px", ""));
-//		var origWidth = parseInt(jss('h1#logo').get()['width'].replace("px", ""));
-		var origHeight = 58;
-		var origWidth = 376;
-		var viewportWidth = $(window).width();
-		var headerPadding = parseInt($('header').css('padding-left').replace("px", ""));
-		var logoWidth = $('#logo').width();
-
-		if ( (viewportWidth < origWidth+(headerPadding*2)) && (logoWidth <= origWidth) ) {
-			var newWidth = viewportWidth-(headerPadding*2)
-			$('#logo').width(newWidth);
-			$('#logo').height(origHeight/origWidth*newWidth);
-		} else if (logoWidth < origWidth){
-			$('#logo').width(origWidth);
-			$('#logo').height(origHeight);
-		}
-
-		if (viewportWidth >= 1030){
-			$('body').removeClass('medium').removeClass('small');
-		} else if (viewportWidth >= 720){
-			$('body').removeClass('small').addClass('medium');
-		} else {
-			$('body').removeClass('medium').addClass('small');
-		}
-	});
-
-	// Trigger resize function to make sure the logo fits
-	$(window).resize();
-
 	$(".videolink a").colorbox({ innerWidth:'1280px', innerHeight:'720px', iframe:true });
 
 	loadFlickrSet("72157624826648990", "photolist", 30);
