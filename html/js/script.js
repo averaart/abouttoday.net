@@ -61,7 +61,7 @@ var loadFlickrSet = function(setId, target, limit){
 		per_page = "&per_page="+limit;
 	}
 	var apiKey = "3d8a7e8f34196d45f383edd8d7a31c1a";
-	var request = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='+apiKey+'&photoset_id='+setId+'&extras=url_l%2C+url_sq&format=json&jsoncallback=?'+per_page;
+	var request = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='+apiKey+'&photoset_id='+setId+'&extras=url_l%2C+url_sq&format=json&jsoncallback=?'+per_page;
 	console.log(request);
 	$.getJSON(request, function(response) {
 		var photos = response.photoset.photo;
