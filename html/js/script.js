@@ -48,54 +48,12 @@ $(document).ready(function() {
 
 	$(".videolink a").colorbox({ innerWidth:'1280px', innerHeight:'720px', iframe:true });
 
-	loadGigs("upcoming-gigs");
-	var now = new Date();
-	var today = now.format("yyyy-mm-dd");
-	var yearAgo = new Date(now.getTime() - 365*24*60*60*1000).format("yyyy-mm-dd");
-	loadGigs("past-gigs", yearAgo+","+today);
 	loadFlickrSet("72157624826648990", "photolist", 30);
 
 });
 
 // <------------ END document ready -----------------------------
 
-
-var loadGigs = function(target, range){
-	var date = "";
-	if (range != undefined){
-		date += "&date="+range;
-	}
-	$.jsonp({
-		url: 'https://api.bandsintown.com/artists/About%20Today/events.json?app_id=abouttodaywebsite&api_version=2.0&artist_id=fbid_125753003016&callback=?'+date,
-		success: function(gigs) {
-			var html = "<ul>";
-			for (var i in gigs){
-				var gig;
-				if (range == undefined){
-					gig = gigs[i];
-				} else {
-					gig = gigs[gigs.length-i-1];
-				}
-				var datetime = gig.datetime.split("T");
-				var date = datetime[0].split("-");
-				var time = datetime[1].split(":");
-				datetime = new Date(date[0], date[1]-1, date[2], time[0], time[1], time[2], 0);
-				date = dateFormat(datetime, "dddd mmmm dS, HH:MM");
-				html += "<li>"+
-					"<a href='"+gig.facebook_rsvp_url+"' title='"+gig.title+"'>"+date+"</a><br>"+
-					gig.venue.name+"<br>"+
-					gig.venue.city+
-					"</li>";
-
-			}
-			html += "</ul>";
-			$('#'+target).html(html);
-		},
-		error: function (XMLHttpRequest, textStatus, errorThrown){
-			loadGigs(target, range);
-		}
-	});
-}
 
 var loadFlickrSet = function(setId, target, limit){
 	var per_page = "";
