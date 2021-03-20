@@ -126,7 +126,7 @@ header{
 h1#logo{
 	display:inline-block;
 	vertical-align:text-bottom;
-	background-image: url("/img/logo.svg");
+	background-image: url("../img/logo.svg");
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
